@@ -1,47 +1,22 @@
-
 import "./App.css";
 
-const modules = [
-  {
-    name: "Health",
-    description:
-      "Support authorized health professionals and responsible health research.",
-    icon: "✚",
-  },
-  {
-    name: "Education",
-    description:
-      "Connect students, teachers, learning activities, and academic reviews.",
-    icon: "▤",
-  },
-  {
-    name: "Research & Discovery",
-    description:
-      "Organize research questions, scientific information, and verified findings.",
-    icon: "⌕",
-  },
-  {
-    name: "Community",
-    description:
-      "Connect community observations, local challenges, and ideas for investigation.",
-    icon: "◎",
-  },
-];
+import PlatformHeader from "./components/PlatformHeader";
+import PlatformFooter from "./components/PlatformFooter";
+import ModuleGrid from "./components/ModuleGrid";
+
+import { getPlatformModules } from "./config/platform-modules";
 
 export default function App() {
+  const modules = getPlatformModules();
+
   return (
     <main className="app">
-      <header className="header">
-        <a className="brand" href="#home">
-          <span className="brand-mark">S</span>
-          <span>SIMONIUM</span>
-        </a>
-
-        <span className="platform-label">Platform Preview</span>
-      </header>
+      <PlatformHeader />
 
       <section className="hero" id="home">
-        <p className="eyebrow">KNOWLEDGE · COLLABORATION · DISCOVERY</p>
+        <p className="eyebrow">
+          KNOWLEDGE · COLLABORATION · DISCOVERY
+        </p>
 
         <h1>
           Connecting knowledge.
@@ -50,9 +25,11 @@ export default function App() {
         </h1>
 
         <p className="hero-description">
-          A multidisciplinary platform designed to connect health,
-          education, research, and communities through organized
-          information and responsible collaboration.
+          SIMONIUM is a multidisciplinary platform designed to
+          connect health professionals, students, teachers,
+          researchers, institutions, and communities through
+          organized information, responsible collaboration,
+          and scientific discovery.
         </p>
 
         <div className="hero-note">
@@ -63,39 +40,38 @@ export default function App() {
       <section className="modules-section" id="modules">
         <div className="section-heading">
           <p className="eyebrow">ONE CONNECTED PLATFORM</p>
+
           <h2>Explore our sectors</h2>
+
           <p>
-            Start with four core modules, with room to expand into
-            additional sectors in the future.
+            SIMONIUM begins with four core sectors and is designed
+            to support additional sectors in the future without
+            rebuilding the entire platform.
           </p>
         </div>
 
-        <div className="module-grid">
-          {modules.map((module) => (
-            <article className="module-card" key={module.name}>
-              <span className="module-icon" aria-hidden="true">
-                {module.icon}
-              </span>
-              <h3>{module.name}</h3>
-              <p>{module.description}</p>
-              <span className="module-status">Planned module</span>
-            </article>
-          ))}
+        <ModuleGrid modules={modules} />
+      </section>
+
+      <section className="hero" id="vision">
+        <p className="eyebrow">OUR VISION</p>
+
+        <h2>Knowledge that connects people and ideas.</h2>
+
+        <p className="hero-description">
+          SIMONIUM aims to bring together observations,
+          educational activities, research questions, and
+          verified findings to support learning, collaboration,
+          and responsible innovation.
+        </p>
+
+        <div className="hero-note">
+          Artificial intelligence is intended to assist human
+          intelligence, not replace human judgment.
         </div>
       </section>
 
-      <footer className="footer">
-        <strong>SIMONIUM</strong>
-        <p>
-          Scientific Information Management, Organization, Network,
-          Intelligence and Unified Multidisciplinary Platform.
-        </p>
-        <small>
-          Early development preview. Secure services and user
-          authentication are not yet configured.
-        </small>
-      </footer>
+      <PlatformFooter />
     </main>
   );
 }
-￼Enter
