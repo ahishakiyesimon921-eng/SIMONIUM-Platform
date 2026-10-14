@@ -1,0 +1,50 @@
+import type { PlatformModule } from "../types/platform";
+
+interface ModuleCardProps {
+  module: PlatformModule;
+}
+
+const MODULE_ICONS: Record<string, string> = {
+  health: "✚",
+  education: "▤",
+  research: "⌕",
+  community: "◎",
+};
+
+export default function ModuleCard({
+  module,
+}: ModuleCardProps) {
+  const isAvailable =
+    module.enabled && module.status === "active";
+
+  return (
+    <article
+      className="module-card"
+      aria-labelledby={`module-${module.id}`}
+    >
+      <span className="module-icon" aria-hidden="true">
+        {MODULE_ICONS[module.icon] ?? "◇"}
+      </span>
+
+      <div className="module-content">
+        <h3 id={`module-${module.id}`}>
+          {module.name}
+        </h3>
+
+        <p>{module.description}</p>
+
+        <span
+          className={`module-status ${
+            isAvailable
+              ? "module-status-active"
+              : "module-status-planned"
+          }`}
+        >
+          {isAvailable
+            ? "Configured module"
+            : "Planned module"}
+        </span>
+      </div>
+    </article>
+  );
+}￼Enter
