@@ -1,10 +1,10 @@
 import "./App.css";
 
-import PlatformHeader from "./components/PlatformHeader";
-import PlatformFooter from "./components/PlatformFooter";
-import ModuleGrid from "./components/ModuleGrid";
-
 import { getPlatformModules } from "./config/platform-modules";
+
+import PlatformHeader from "./components/PlatformHeader";
+import ModuleGrid from "./components/ModuleGrid";
+import PlatformFooter from "./components/PlatformFooter";
 
 export default function App() {
   const modules = getPlatformModules();
@@ -45,33 +45,70 @@ export default function App() {
 
           <p>
             SIMONIUM begins with four core sectors and is designed
-            to support additional sectors in the future without
-            rebuilding the entire platform.
+            to support additional sectors in the future.
           </p>
         </div>
 
         <ModuleGrid modules={modules} />
       </section>
 
-      <section className="hero" id="vision">
-        <p className="eyebrow">OUR VISION</p>
+      <section className="platform-principles">
+        <div className="section-heading">
+          <p className="eyebrow">BUILT FOR COLLABORATION</p>
 
-        <h2>Knowledge that connects people and ideas.</h2>
+          <h2>One platform, connected knowledge</h2>
 
-        <p className="hero-description">
-          SIMONIUM aims to bring together observations,
-          educational activities, research questions, and
-          verified findings to support learning, collaboration,
-          and responsible innovation.
-        </p>
+          <p>
+            SIMONIUM aims to connect information, people, and
+            ideas across different sectors while respecting
+            access permissions, data protection, and the need
+            to verify information before it is trusted.
+          </p>
+        </div>
 
-        <div className="hero-note">
-          Artificial intelligence is intended to assist human
-          intelligence, not replace human judgment.
+        <div className="module-grid">
+          <article className="module-card">
+            <span className="module-icon" aria-hidden="true">
+              ◈
+            </span>
+
+            <h3>Organized Information</h3>
+
+            <p>
+              Structure information so that authorized users
+              can find and use relevant knowledge.
+            </p>
+          </article>
+
+          <article className="module-card">
+            <span className="module-icon" aria-hidden="true">
+              ◎
+            </span>
+
+            <h3>Human Collaboration</h3>
+
+            <p>
+              Connect people with different knowledge,
+              responsibilities, and perspectives.
+            </p>
+          </article>
+
+          <article className="module-card">
+            <span className="module-icon" aria-hidden="true">
+              ⌕
+            </span>
+
+            <h3>Research and Discovery</h3>
+
+            <p>
+              Support the responsible organization, review,
+              and exploration of research questions and findings.
+            </p>
+          </article>
         </div>
       </section>
 
       <PlatformFooter />
     </main>
   );
-}
+            }
