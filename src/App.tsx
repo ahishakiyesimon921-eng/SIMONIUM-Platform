@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 import { getPlatformModules } from "./config/platform-modules";
@@ -6,8 +7,52 @@ import PlatformHeader from "./components/PlatformHeader";
 import ModuleGrid from "./components/ModuleGrid";
 import PlatformFooter from "./components/PlatformFooter";
 
+import HealthModule from "./modules/health/HealthModule";
+
 export default function App() {
   const modules = getPlatformModules();
+
+  const [activeModule, setActiveModule] = useState<string | null>(
+    null,
+  );
+
+  function handleOpenModule(moduleId: string) {
+    const selectedModule = modules.find(
+      (module) => module.id === moduleId,
+    );
+
+    if (
+      !selectedModule ||
+      !selectedModule.enabled ||
+      selectedModule.status !== "active"
+    ) {
+      return;
+    }
+
+    if (moduleId === "health") {
+      setActiveModule("health");
+    }
+  }
+
+  function handleBackToPlatform() {
+    setActiveModule(null);
+  }
+
+  if (activeModule === "health") {
+    return (
+      <main className="app">
+        <button
+          type="button"
+          onClick={handleBackToPlatform}
+          className="back-to-platform"
+        >
+          ← Back to SIMONIUM Platform
+        </button>
+
+        <HealthModule />
+      </main>
+    );
+  }
 
   return (
     <main className="app">
@@ -49,7 +94,10 @@ export default function App() {
           </p>
         </div>
 
-        <ModuleGrid modules={modules} />
+        <ModuleGrid
+          modules={modules}
+          onOpenModule={handleOpenModule}
+        />
       </section>
 
       <section className="platform-principles">
@@ -111,4 +159,4 @@ export default function App() {
       <PlatformFooter />
     </main>
   );
-            }
+                    }
