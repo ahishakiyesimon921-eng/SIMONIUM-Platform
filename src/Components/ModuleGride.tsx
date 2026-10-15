@@ -3,10 +3,12 @@ import ModuleCard from "./ModuleCard";
 
 interface ModuleGridProps {
   modules: PlatformModule[];
+  onOpenModule?: (moduleId: string) => void;
 }
 
 export default function ModuleGrid({
   modules,
+  onOpenModule,
 }: ModuleGridProps) {
   if (modules.length === 0) {
     return (
@@ -22,8 +24,9 @@ export default function ModuleGrid({
         <ModuleCard
           key={module.id}
           module={module}
+          onOpen={onOpenModule}
         />
       ))}
     </div>
   );
-}￼Enter
+}
