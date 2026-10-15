@@ -9,6 +9,9 @@ import ModuleGrid from "./components/ModuleGrid";
 import PlatformFooter from "./components/PlatformFooter";
 
 import HealthModule from "./modules/health/HealthModule";
+import EducationModule from "./modules/education/EducationModule";
+import ResearchModule from "./modules/research/ResearchModule";
+import CommunityModule from "./modules/community/CommunityModule";
 
 type ModuleComponent = ComponentType;
 
@@ -16,6 +19,9 @@ const MODULE_COMPONENTS: Partial<
   Record<CoreSectorId, ModuleComponent>
 > = {
   health: HealthModule,
+  education: EducationModule,
+  "research-discovery": ResearchModule,
+  community: CommunityModule,
 };
 
 export default function App() {
@@ -37,6 +43,10 @@ export default function App() {
       return;
     }
 
+    if (!MODULE_COMPONENTS[selectedModule.id]) {
+      return;
+    }
+
     setActiveModule(selectedModule.id);
   }
 
@@ -45,14 +55,37 @@ export default function App() {
   }
 
   if (activeModule !== null) {
-    const selectedModule = modules.find(
-      (module) => module.id === activeModule,
-    );
-
     const ActiveModule = MODULE_COMPONENTS[activeModule];
 
+    if (!ActiveModule) {
+      return (
+        <main className="app">
+          <button
+            type="button"
+            onClick={handleBackToPlatform}
+            className="back-to-platform"
+          >
+            ← Back to SIMONIUM Platform
+          </button>
+
+          <section className="hero">
+            <p className="eyebrow">
+              SIMONIUM MODULE DEVELOPMENT
+            </p>
+
+            <h1>Module unavailable</h1>
+
+            <p className="hero-description">
+              This module is not currently available.
+              Return to the platform dashboard to continue.
+            </p>
+          </section>
+        </main>
+      );
+    }
+
     return (
-      <div className="app">
+      <main className="app">
         <button
           type="button"
           onClick={handleBackToPlatform}
@@ -61,31 +94,8 @@ export default function App() {
           ← Back to SIMONIUM Platform
         </button>
 
-        {ActiveModule ? (
-          <ActiveModule />
-        ) : (
-          <section className="hero">
-            <p className="eyebrow">
-              SIMONIUM MODULE DEVELOPMENT
-            </p>
-
-            <h1>
-              {selectedModule?.name ?? "Platform Module"}
-            </h1>
-
-            <p className="hero-description">
-              {selectedModule?.description ??
-                "This module is being prepared."}
-            </p>
-
-            <div className="hero-note">
-              This module is not implemented yet.
-              Its features will become available as development
-              progresses.
-            </div>
-          </section>
-        )}
-      </div>
+        <ActiveModule />
+      </main>
     );
   }
 
@@ -105,8 +115,8 @@ export default function App() {
         </h1>
 
         <p className="hero-description">
-          SIMONIUM is a multidisciplinary platform designed to
-          connect health professionals, students, teachers,
+          SIMONIUM is a multidisciplinary platform designed
+          to connect health professionals, students, teachers,
           researchers, institutions, and communities through
           organized information, responsible collaboration,
           and scientific discovery.
@@ -119,13 +129,15 @@ export default function App() {
 
       <section className="modules-section" id="modules">
         <div className="section-heading">
-          <p className="eyebrow">ONE CONNECTED PLATFORM</p>
+          <p className="eyebrow">
+            ONE CONNECTED PLATFORM
+          </p>
 
           <h2>Explore our sectors</h2>
 
           <p>
-            SIMONIUM begins with four core sectors and is designed
-            to support additional sectors in the future.
+            SIMONIUM begins with four core sectors and is
+            designed to support additional sectors in the future.
           </p>
         </div>
 
@@ -137,7 +149,9 @@ export default function App() {
 
       <section className="platform-principles">
         <div className="section-heading">
-          <p className="eyebrow">BUILT FOR COLLABORATION</p>
+          <p className="eyebrow">
+            BUILT FOR COLLABORATION
+          </p>
 
           <h2>One platform, connected knowledge</h2>
 
@@ -151,7 +165,10 @@ export default function App() {
 
         <div className="module-grid">
           <article className="module-card">
-            <span className="module-icon" aria-hidden="true">
+            <span
+              className="module-icon"
+              aria-hidden="true"
+            >
               ◈
             </span>
 
@@ -164,7 +181,10 @@ export default function App() {
           </article>
 
           <article className="module-card">
-            <span className="module-icon" aria-hidden="true">
+            <span
+              className="module-icon"
+              aria-hidden="true"
+            >
               ◎
             </span>
 
@@ -177,7 +197,10 @@ export default function App() {
           </article>
 
           <article className="module-card">
-            <span className="module-icon" aria-hidden="true">
+            <span
+              className="module-icon"
+              aria-hidden="true"
+            >
               ⌕
             </span>
 
@@ -194,4 +217,4 @@ export default function App() {
       <PlatformFooter />
     </main>
   );
-            }
+}
