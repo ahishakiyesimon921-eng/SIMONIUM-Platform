@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, type ComponentType } from "react";
 import "./App.css";
 
+import type { CoreSectorId } from "./types/platform";
 import { getPlatformModules } from "./config/platform-modules";
 
 import PlatformHeader from "./components/PlatformHeader";
@@ -9,12 +10,19 @@ import PlatformFooter from "./components/PlatformFooter";
 
 import HealthModule from "./modules/health/HealthModule";
 
+type ModuleComponent = ComponentType;
+
+const MODULE_COMPONENTS: Partial<
+  Record<CoreSectorId, ModuleComponent>
+> = {
+  health: HealthModule,
+};
+
 export default function App() {
   const modules = getPlatformModules();
 
-  const [activeModule, setActiveModule] = useState<string | null>(
-    null,
-  );
+  const [activeModule, setActiveModule] =
+    useState<CoreSectorId | null>(null);
 
   function handleOpenModule(moduleId: string) {
     const selectedModule = modules.find(
@@ -29,18 +37,22 @@ export default function App() {
       return;
     }
 
-    if (moduleId === "health") {
-      setActiveModule("health");
-    }
+    setActiveModule(selectedModule.id);
   }
 
   function handleBackToPlatform() {
     setActiveModule(null);
   }
 
-  if (activeModule === "health") {
+  if (activeModule !== null) {
+    const selectedModule = modules.find(
+      (module) => module.id === activeModule,
+    );
+
+    const ActiveModule = MODULE_COMPONENTS[activeModule];
+
     return (
-      <main className="app">
+      <div className="app">
         <button
           type="button"
           onClick={handleBackToPlatform}
@@ -49,8 +61,31 @@ export default function App() {
           ← Back to SIMONIUM Platform
         </button>
 
-        <HealthModule />
-      </main>
+        {ActiveModule ? (
+          <ActiveModule />
+        ) : (
+          <section className="hero">
+            <p className="eyebrow">
+              SIMONIUM MODULE DEVELOPMENT
+            </p>
+
+            <h1>
+              {selectedModule?.name ?? "Platform Module"}
+            </h1>
+
+            <p className="hero-description">
+              {selectedModule?.description ??
+                "This module is being prepared."}
+            </p>
+
+            <div className="hero-note">
+              This module is not implemented yet.
+              Its features will become available as development
+              progresses.
+            </div>
+          </section>
+        )}
+      </div>
     );
   }
 
@@ -159,4 +194,4 @@ export default function App() {
       <PlatformFooter />
     </main>
   );
-                    }
+            }
