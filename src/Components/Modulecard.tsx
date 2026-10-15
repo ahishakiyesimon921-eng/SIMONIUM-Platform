@@ -1,4 +1,4 @@
-imimport type { PlatformModule } from "../types/platform";
+import type { PlatformModule } from "../types/platform";
 
 interface ModuleCardProps {
   module: PlatformModule;
