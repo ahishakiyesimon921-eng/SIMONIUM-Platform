@@ -1,537 +1,648 @@
 # SIMONIUM Platform
 
-## Scientific Information Management, Organization, Network, Intelligence and Unified Multidisciplinary Platform
+### Scientific Information Management, Organization, Network, Intelligence and Unified Multidisciplinary Platform
 
 **Connecting community observations, research questions, classrooms, and discovery.**
 
-SIMONIUM is a multidisciplinary digital platform designed to connect information, research questions, educational activities, healthcare knowledge, and community observations.
-
-The platform aims to improve how information is organized, reviewed, connected, analyzed, and responsibly reused across different sectors.
+**Project Status:** In Development
 
 ---
 
-## 1. The Problem
+## 1. What Is SIMONIUM?
 
-Important information is often scattered across books, documents, research publications, images, videos, datasets, institutions, and individual knowledge.
+SIMONIUM is a multidisciplinary digital platform under development that aims to connect communities, students, teachers, researchers, health professionals, and institutions through organized information sharing, collaboration, education, scientific research, and discovery.
 
-This fragmentation makes it difficult to find relevant information, connect related findings, verify information quality, and reuse existing knowledge.
+The platform is being designed to address a fundamental challenge: useful information, real-world problems, educational activities, and research efforts can exist in separate environments without an effective process for connecting them.
 
-SIMONIUM addresses four interconnected areas.
+SIMONIUM proposes an integrated digital environment where observations from communities, research questions from institutions, educational activities, and professional knowledge can be connected through structured workflows.
 
-### 1.1 Research and Scientific Discovery
+Rather than treating education, healthcare, research, and community development as completely separate activities, SIMONIUM aims to create connections between them while maintaining appropriate access permissions, information quality controls, and privacy protections.
 
-Research information and scientific findings may remain distributed across different sources.
+The platform will use a modular architecture so that additional sectors and capabilities can be introduced as it develops.
 
-SIMONIUM aims to connect research questions, information sources, observations, and findings to support organized research and scientific discovery.
-
-### 1.2 Health
-
-Healthcare professionals and researchers need reliable information to understand health problems, investigate diseases, and develop research questions.
-
-SIMONIUM aims to support the organization of health-related observations and research information while allowing appropriate professional review.
-
-The platform is intended to support information management and research collaboration, not replace healthcare professionals or clinical judgment.
-
-### 1.3 Education
-
-Students and teachers can contribute to knowledge through learning activities, research questions, and the collection of information from appropriate sources.
-
-SIMONIUM aims to connect classroom learning with practical activities, community knowledge, and research.
-
-Students can learn to collect information responsibly, document findings, and submit work for review by authorized people.
-
-### 1.4 Community and Cross-Sector Collaboration
-
-Communities possess observations and experiences that may contribute to education, healthcare, and research.
-
-SIMONIUM aims to connect community information needs with relevant research questions, educational activities, and authorized professionals.
+**SIMONIUM's central idea is simple: connect people, organize information, verify contributions, and turn knowledge into opportunities for learning, research, and discovery.**
 
 ---
 
-## 2. Proposed Solution
+## 2. Why Is SIMONIUM Needed?
 
-SIMONIUM is designed to provide an extensible platform for organizing information and coordinating activities across multiple sectors.
+Many important problems require information and collaboration from different people and institutions.
 
-Its intended capabilities include:
+A community may observe a problem but lack an organized way to communicate it to researchers. Students may collect useful information during educational activities, but that information may not become part of a structured research process. Researchers may need observations or data that require cooperation with communities, educational institutions, or health professionals.
 
-- Organizing information from different sources.
-- Connecting related research questions, observations, and findings.
-- Supporting structured information collection.
-- Allowing authorized people to review and correct submissions.
-- Connecting educational activities with research questions.
-- Supporting collaboration between communities, students, teachers, researchers, and healthcare professionals.
-- Improving the discoverability of approved information.
-- Supporting responsible information analysis and reuse.
-- Providing a foundation for future artificial intelligence assistance.
-- Allowing additional sectors to be added as the platform develops.
+Similarly, information collected for one purpose may have potential value for another purpose, but connecting it requires appropriate organization, verification, permission, and collaboration.
 
-Important information and decisions should remain subject to appropriate human review and authorization.
+These are problems SIMONIUM is designed to investigate and address.
+
+The following are the project's initial problem areas. They describe the challenges the platform intends to address, not claims that every institution or community experiences them equally.
+
+### Problem 1: Disconnected Information and Collaboration
+
+**The challenge**
+
+Information, observations, research activities, and professional knowledge may be managed separately by different people, groups, and institutions.
+
+This can make it difficult to discover relevant information, coordinate activities, and establish useful connections between different fields.
+
+**SIMONIUM's proposed solution**
+
+SIMONIUM will provide a modular digital environment designed to connect relevant information, participants, and activities across Health, Education, Research & Discovery, and Community sectors.
+
+**Expected impact**
+
+Improved information organization, stronger collaboration, and easier discovery of connections between problems, observations, and research activities.
+
+### Problem 2: Limited Connections Between Classroom Learning and Real-World Problems
+
+**The challenge**
+
+Students need opportunities to apply what they learn to practical problems. However, classroom activities and real-world observations do not always form part of a coordinated research and discovery process.
+
+**SIMONIUM's proposed solution**
+
+The Education module will support structured learning activities connected to research questions, community observations, and practical investigations.
+
+Teachers will be able to review student submissions, provide feedback, and help improve the quality of collected information.
+
+**Expected impact**
+
+More opportunities for practical learning, critical thinking, problem-solving, and meaningful participation in research-related activities.
+
+### Problem 3: Difficulty Organizing Community Observations for Research
+
+**The challenge**
+
+Communities may identify local challenges and make observations that could help researchers understand real-world problems.
+
+However, observations need suitable reporting procedures, organization, review, and verification before they can reliably support research or decision-making.
+
+**SIMONIUM's proposed solution**
+
+The Community module will provide a planned workflow for submitting observations and identifying problems.
+
+Relevant submissions may be connected to research questions and reviewed by authorized participants before being accepted into appropriate records.
+
+**Expected impact**
+
+Better opportunities for communities to contribute to structured investigations and for researchers to understand problems observed in real-world settings.
+
+### Problem 4: Research Questions and Data Collection Can Be Difficult to Coordinate
+
+**The challenge**
+
+Research requires clearly defined questions, appropriate information collection, review procedures, and reliable records.
+
+Coordinating these activities across researchers, students, teachers, institutions, and communities can require significant effort.
+
+**SIMONIUM's proposed solution**
+
+The Research & Discovery module will be designed to organize research questions, coordinate approved activities, track submissions, and connect reviewed information to relevant investigations.
+
+**Expected impact**
+
+Improved coordination of research activities, clearer information workflows, and better opportunities to use reviewed information in further investigations.
+
+### Problem 5: Information Quality, Verification, and Responsible Access
+
+**The challenge**
+
+Collected information is not automatically accurate, complete, or suitable for every use.
+
+Without appropriate review and access controls, incorrect information may be accepted, sensitive records may be exposed, and users may perform actions beyond their responsibilities.
+
+**SIMONIUM's proposed solution**
+
+SIMONIUM is being designed around controlled submission, review, correction, verification, approval, and access management.
+
+The planned system will use role-based permissions enforced by backend services. Important actions should be recorded through an audit trail.
+
+Artificial Intelligence may assist with organizing information and identifying possible inconsistencies, but it will not replace authorized human review and approval.
+
+**Expected impact**
+
+Improved accountability, more controlled access to information, and stronger processes for maintaining information quality.
+
+These outcomes will depend on the successful implementation and testing of the relevant controls.
 
 ---
 
-## 3. Vision
+## 3. SIMONIUM's Vision
 
-To connect knowledge, research, education, healthcare information, and community observations in a multidisciplinary digital environment that supports scientific discovery and informed decision-making.
+To build an integrated multidisciplinary knowledge ecosystem that connects people, information, institutions, and research activities to support education, scientific discovery, healthcare-related investigations, and community development.
 
-## 4. Mission
+## 4. SIMONIUM's Mission
 
-To improve the organization, accessibility, connectivity, and responsible reuse of information through digital technology and collaboration across different sectors.
+SIMONIUM aims to:
 
-## 5. Objectives
-
-1. Improve information organization and discoverability.
-2. Connect research questions with relevant information and evidence.
-3. Support collaboration between communities and institutions.
-4. Connect classroom learning with practical information collection.
-5. Encourage information review and verification.
-6. Support the responsible reuse of existing knowledge.
-7. Help researchers identify related information and knowledge gaps.
-8. Explore responsible artificial intelligence assistance.
-9. Build an extensible platform that can accommodate additional sectors.
+- Connect communities, educational institutions, researchers, and health professionals.
+- Organize information from different sectors through structured digital workflows.
+- Connect real-world observations with research questions and learning activities.
+- Support collaboration between students, teachers, researchers, and institutions.
+- Encourage review, correction, verification, and responsible information use.
+- Explore responsible Artificial Intelligence assistance for information management and analysis.
+- Support evidence-based research and decision-making.
+- Provide an extensible architecture for future multidisciplinary applications.
 
 ---
 
-## 6. Platform Modules
+## 5. Core Modules
 
-SIMONIUM is designed around interconnected modules.
+SIMONIUM is being developed around four initial core sectors.
 
-### 6.1 Health
+Each module will have its own responsibilities while remaining part of the wider platform.
 
-The Health module is intended to support:
+### 5.1 Health
 
-- Documentation of health-related observations.
-- Organization of health research questions.
-- Review by authorized health professionals.
-- Connections between health questions and relevant research information.
-- Collaboration between healthcare professionals and researchers.
+The Health module is intended to support structured health-related observations, research requests, and collaboration between authorized health professionals and researchers.
 
-Sensitive health information must be protected and accessible only to appropriately authorized users.
+Planned capabilities include:
 
-### 6.2 Education
+- Submission of health-related observations.
+- Organization of health research questions and requests.
+- Review and verification of submitted information.
+- Collaboration between authorized health professionals and researchers.
+- Controlled access to sensitive health-related records.
+- Connections between relevant health questions and approved research activities.
 
-The Education module is intended to support:
+**Expected value:** Better organization of health-related information and improved coordination of appropriate research activities.
 
-- Educational activities and research questions.
-- Teacher-assigned learning tasks.
-- Student information collection and submissions.
+SIMONIUM is not intended to replace professional medical judgment, clinical examination, or established healthcare systems.
+
+Health information must be handled with appropriate privacy protections and access controls.
+
+### 5.2 Education
+
+The Education module is intended to connect students, teachers, practical learning activities, and research questions.
+
+Planned capabilities include:
+
+- Creation and assignment of learning activities.
+- Student submissions and observations.
 - Teacher review, correction, and feedback.
-- Connections between classroom learning and practical activities.
-- Development of critical thinking and information-handling skills.
+- Research-based learning activities.
+- Connections between classroom learning and community problems.
+- Tracking the status of educational submissions.
 
-### 6.3 Research & Discovery
+**Expected value:** More opportunities for practical learning, critical thinking, collaboration, and participation in structured investigations.
 
-The Research & Discovery module is intended to support:
+### 5.3 Research & Discovery
 
-- Organization of research questions.
-- Connection of questions with relevant information sources.
-- Review of submitted information.
-- Discovery of related findings.
-- Identification of knowledge gaps.
-- Analysis of appropriate information.
-- Responsible reuse of reviewed findings.
+The Research & Discovery module is intended to connect research questions, information collection, reviewed records, and further investigation.
 
-### 6.4 Community
+Planned capabilities include:
 
-The Community module is intended to support:
+- Research question management.
+- Research task coordination.
+- Collection and organization of research-related submissions.
+- Review and verification workflows.
+- Connections between relevant observations and research questions.
+- Collaboration among researchers, students, teachers, institutions, and other authorized participants.
+- Support for further analysis and scientific discovery.
 
-- Documentation of community observations.
-- Submission of information for review.
-- Connection of local questions with relevant research activities.
-- Communication between communities and authorized institutions.
-- Responsible participation in knowledge creation.
+**Expected value:** Better coordination of research activities and improved opportunities to identify useful relationships between observations, questions, and existing knowledge.
 
-### 6.5 Extensible Architecture
+### 5.4 Community
 
-SIMONIUM is designed to accommodate additional sectors as its needs and capabilities grow.
+The Community module is intended to connect community members with relevant educational, research, health, and development activities.
 
-New modules should be introduced in a way that supports the wider platform without requiring unnecessary reconstruction of existing modules.
+Planned capabilities include:
 
----
+- Submission of community observations.
+- Reporting of local problems.
+- Identification of questions that may require investigation.
+- Participation in approved research activities.
+- Tracking the status of submitted reports.
+- Access to appropriate feedback and approved information.
 
-## 7. SIMONIUM Workflow
+**Expected value:** More structured opportunities for communities to communicate local challenges and participate in activities intended to address them.
 
-SIMONIUM is designed around a structured workflow connecting research questions, information collection, review, and discovery.
-
-### Step 1: Research Questions
-
-Research institutions, researchers, or other authorized participants identify questions requiring investigation.
-
-### Step 2: Information Collection
-
-Teachers adapt appropriate questions into learning activities where relevant.
-
-Students and other authorized contributors collect information from permitted sources, including books, educational materials, research publications, and community observations.
-
-### Step 3: Submission
-
-Contributors document and submit their findings with relevant source information.
-
-### Step 4: Review and Correction
-
-Teachers, researchers, healthcare professionals, or other authorized reviewers examine submissions according to the subject and purpose.
-
-They may request corrections, identify missing information, or reject unsuitable submissions.
-
-### Step 5: Verification
-
-Information is checked against available evidence, source documentation, and relevant professional requirements.
-
-Information should not be treated as verified simply because it has been submitted.
-
-### Step 6: Organization and Connection
-
-Reviewed information can be organized and connected with related research questions, observations, and findings.
-
-### Step 7: Research and Discovery
-
-Authorized users can examine relevant information to investigate patterns, explore questions, and identify areas requiring further research.
-
-### Step 8: Responsible Reuse
-
-Approved information may be reused for permitted educational, research, healthcare-information, or community purposes.
-
-Source attribution, privacy, permissions, and applicable restrictions must be respected.
-
-### Workflow Overview
-
-**Research Questions → Information Collection → Submission → Review → Verification → Organization → Connection → Analysis → Responsible Reuse**
-
-This workflow describes the intended SIMONIUM approach. Each stage must be implemented and tested before it can be considered fully operational.
+Community participation will be subject to appropriate privacy, consent, and access requirements.
 
 ---
 
-## 8. Data Sources and Statistical Resources
+## 6. How SIMONIUM Will Work
 
-Reliable information is important for understanding health, education, population, living conditions, and other development-related questions.
+SIMONIUM's intended workflow connects problem identification, research, education, information verification, and discovery.
 
-SIMONIUM's information-management approach emphasizes documenting sources, understanding the context of information, and distinguishing verified findings from unverified observations.
+### Step 1: Identify a Real Problem
 
-The following resources provide statistical and development context for Rwanda.
+A problem may be identified through community observations, educational activities, professional experience, institutional priorities, or existing research.
 
-### 8.1 National Institute of Statistics of Rwanda (NISR)
+Where available, reliable reports and documented evidence should be used to establish the problem.
 
-NISR provides official statistical information, reports, survey publications, census results, and methodological documentation.
+### Step 2: Formulate a Research Question
 
-These resources can help users understand national indicators and identify questions that may require further investigation.
+Researchers or authorized institutions may define a question that requires investigation.
 
-Website:
+The question should identify what needs to be understood, investigated, or improved.
 
-https://www.statistics.gov.rw/
+### Step 3: Organize the Activity
 
-### 8.2 Integrated Household Living Conditions Survey — EICV7
+An appropriate activity may be assigned to authorized participants, such as researchers, students, teachers, or health professionals.
 
-EICV7 provides information about household living conditions and related socioeconomic indicators in Rwanda.
+Responsibilities, required information, and review procedures should be clearly defined.
 
-Its publications can support understanding of health, education, and living-condition indicators.
+### Step 4: Collect Information
 
-**Reference:** National Institute of Statistics of Rwanda, EICV7 Main Indicators Report, 2023/24.
+Participants collect relevant observations or information through approved activities.
 
-Official website:
+The information collected will depend on the research question and the responsibilities of each participant.
 
-https://www.statistics.gov.rw/
+### Step 5: Submit and Review
 
-### 8.3 EICV7 Methodological Documentation
+Submitted information enters an appropriate review process.
 
-Methodological documentation helps explain how statistical information is collected, processed, and interpreted.
+Authorized reviewers may examine submissions, request corrections, identify missing information, or reject unsuitable submissions.
 
-Understanding methodology is important when evaluating the reliability and limitations of reported indicators.
+### Step 6: Verify and Approve
 
-**Reference:** National Institute of Statistics of Rwanda, EICV7 Methodological Note.
+Information is accepted into approved records only after the required review and verification procedures have been completed.
 
-Official website:
+The level of verification will depend on the information type and its intended use.
 
-https://www.statistics.gov.rw/
+A submission must not automatically be treated as verified simply because it exists in the platform.
 
-### 8.4 Rwanda Statistical Yearbook 2025
+### Step 7: Organize and Connect Information
 
-The Rwanda Statistical Yearbook provides statistical information across different areas of national development.
+Approved records may be organized and linked to relevant research questions, learning activities, and other authorized information.
 
-It can be consulted when investigating relationships between indicators and identifying relevant statistical evidence.
+Access to records will depend on the user's permissions and applicable privacy requirements.
 
-**Reference:** National Institute of Statistics of Rwanda, Rwanda Statistical Yearbook 2025.
+### Step 8: Support Research and Discovery
 
-Official website:
+Researchers and other authorized participants may use suitable, approved information to support further investigations, identify patterns, and develop new research questions.
 
-https://www.statistics.gov.rw/
+Any conclusions must be supported by appropriate evidence and analysis.
 
-### 8.5 Fifth Rwanda Population and Housing Census (RPHC5)
+### Step 9: Share Appropriate Results
 
-Population census publications provide information about population characteristics.
+Approved findings and relevant feedback may be shared with authorized users.
 
-Educational characteristics published through RPHC5 can help inform questions concerning education and population.
+Sensitive information must not be made public merely because it has been reviewed or approved.
 
-**Reference:** National Institute of Statistics of Rwanda, RPHC5 Educational Characteristics of the Population.
+**The intended workflow is:**
 
-Official website:
-
-https://www.statistics.gov.rw/
-
-### 8.6 Rwanda Vision 2050
-
-Rwanda Vision 2050 provides national development context relevant to long-term human development, knowledge, innovation, and transformation.
-
-SIMONIUM's multidisciplinary approach seeks to support information organization and collaboration relevant to these areas.
-
-**Reference:** Government of Rwanda, Rwanda Vision 2050.
-
-Official government website:
-
-https://www.gov.rw/
-
-### Responsible Use of References
-
-External publications must be distinguished from information generated by SIMONIUM.
-
-When specific statistics are used, their original definitions, publication details, reference periods, and relevant limitations should be retained.
-
-Referencing a publication does not mean that its dataset has already been imported into SIMONIUM.
-
-Any future integration of external datasets must respect applicable permissions, licensing conditions, privacy requirements, and data-use restrictions.
+Problem Identification → Research Questions → Activity Coordination → Information Collection → Review and Correction → Verification and Approval → Organized Knowledge → Research and Discovery.
 
 ---
 
-## 9. Technology Stack
+## 7. How the Modules Connect
 
-The current project uses:
+SIMONIUM's purpose is not simply to place four separate modules on one website.
 
-- **React:** User-interface development.
-- **TypeScript:** Application code with type checking.
-- **Vite:** Development and build tooling.
-- **CSS:** Interface styling.
-- **GitHub:** Source-code version control.
+Its broader goal is to establish useful connections between them.
 
-The application is being developed incrementally.
+For example:
 
-### Intended Future Technical Capabilities
+1. A community identifies a local problem.
+2. An authorized researcher or institution determines whether the problem requires investigation.
+3. A research question is developed.
+4. Appropriate educational or professional activities are organized.
+5. Participants collect relevant information.
+6. Authorized reviewers examine and verify submissions.
+7. Suitable approved information is organized for the relevant research activity.
+8. Researchers analyze the information and document their findings.
+9. Appropriate results are shared with authorized participants.
 
-The platform may require:
+This example describes a proposed workflow, not a claim that the complete process is already operational.
 
-- A shared backend and database.
-- User authentication.
+Not every community observation will become a research project, and not every student submission will become part of a research database.
+
+The process will depend on relevance, permissions, information quality, ethical requirements, and the needs of each activity.
+
+---
+
+## 8. User Roles and Responsibilities
+
+SIMONIUM is planned to support different user roles.
+
+### Community Member
+Reports appropriate community observations and participates in authorized activities.
+
+### Student
+Completes assigned learning activities and submits relevant information.
+
+### Teacher
+Organizes learning activities, reviews student work, provides feedback, and verifies information within the teacher's authorized responsibilities.
+
+### Researcher
+Develops research questions, coordinates investigations, and accesses information permitted for approved research purposes.
+
+### Discoverer
+Participates in authorized investigation, analysis, and the development of new knowledge.
+
+### Doctor or Health Professional
+Contributes appropriate professional observations and participates in authorized health-related activities.
+
+### Institution
+Coordinates institutional activities and manages authorized institutional responsibilities.
+
+### Administrator
+Manages platform operations and authorized administrative functions.
+
+These roles are intended to have different permissions.
+
+Users must not gain privileged access simply by selecting a role on a registration form.
+
+The production system must verify permissions through secure backend services.
+
+---
+
+## 9. Responsible Artificial Intelligence
+
+SIMONIUM aims to explore Artificial Intelligence as an assistant for information management and research support.
+
+Potential applications include:
+
+- Organizing information into appropriate categories.
+- Identifying possible duplicate records.
+- Suggesting connections between related research questions and observations.
+- Highlighting missing information or possible inconsistencies.
+- Supporting information search and retrieval.
+- Assisting with preliminary analysis of suitable datasets.
+
+AI-generated suggestions may contain errors and must be evaluated according to the task.
+
+AI will not automatically establish the truth of a report, verify a scientific finding, authorize access to private information, or replace required human approval.
+
+The use of AI in sensitive areas will require additional safeguards, testing, and appropriate human oversight.
+
+These capabilities are planned and must not be interpreted as fully implemented features.
+
+---
+
+## 10. Evidence-Based Problem Solving
+
+SIMONIUM aims to address real problems using reliable evidence rather than unsupported assumptions.
+
+When documenting a problem or presenting a proposed solution, the project will distinguish four elements:
+
+### 1. Evidence and Source
+Identify the report, dataset, publication, or other reliable source supporting the problem.
+
+### 2. Identified Problem
+Explain what the evidence establishes and what challenge requires attention.
+
+### 3. Proposed SIMONIUM Solution
+Describe the specific platform module, workflow, or capability intended to address the problem.
+
+### 4. Expected Impact
+Explain the intended benefit and identify what evidence would be needed to determine whether the solution succeeds.
+
+Official publications, including relevant reports from the National Institute of Statistics of Rwanda (NISR), may be used when they provide appropriate evidence for a specific problem.
+
+Sources must be cited accurately.
+
+Statistics must never be invented, and findings from one source must not be incorrectly attributed to another.
+
+A proposed solution must not be described as proven effective without supporting evaluation.
+
+The project will need further research to establish the scale of each problem, understand existing solutions, and determine where SIMONIUM can provide meaningful additional value.
+
+---
+
+## 11. Technology and Architecture
+
+The current frontend development uses the following technologies:
+
+- **React:** Building the user interface.
+- **TypeScript:** Improving code organization and type safety.
+- **Vite:** Supporting development and frontend builds.
+- **CSS:** Styling the platform interface.
+- **GitHub:** Managing source code and project documentation.
+
+The project uses a modular architecture intended to support the development of separate sectors within a shared platform.
+
+The current codebase includes initial frontend structures such as:
+
+- Main platform interface.
+- Platform header and footer.
+- Module cards and module grid.
+- Central module configuration.
+- Shared platform types.
+- Initial Health module interface.
+
+The final production architecture will require appropriate backend services, authentication, database infrastructure, file storage, and secure APIs.
+
+The existence of a frontend interface does not mean that secure online data sharing or server-enforced permissions are already operational.
+
+---
+
+## 12. Security, Privacy, and Data Governance
+
+Trust is essential to a platform that may handle information from communities, educational activities, research, and healthcare-related work.
+
+SIMONIUM's planned security and data management capabilities include:
+
+- Secure user authentication.
 - Server-enforced role-based access control.
-- Secure APIs.
-- File management.
-- Cross-module information sharing.
-- Audit logs.
+- Appropriate separation of public and private information.
+- Controlled access to sensitive records.
+- Review, correction, approval, and rejection workflows.
+- Audit trails for important actions.
+- Secure file management.
 - Backup and restoration.
-- Search, filtering, and notifications.
-- Artificial intelligence integrations.
+- Appropriate record retention and deletion procedures.
+- Protection of data transmitted through APIs.
+- Responsible management of research and health-related information.
 
-These capabilities must be implemented and tested before being described as operational.
+These capabilities require implementation, testing, and ongoing maintenance.
 
----
+Sensitive information must be collected only when appropriate and handled according to applicable legal, ethical, and privacy requirements.
 
-## 10. User Roles and Permissions
+Backup and restoration mechanisms must be tested before they can be relied upon.
 
-SIMONIUM is intended to support different user categories:
-
-- Community contributors.
-- Students.
-- Teachers.
-- Researchers.
-- Discoverers.
-- Doctors and other authorized health professionals.
-- Institutions.
-- Administrators.
-
-Each role should have permissions appropriate to its responsibilities.
-
-For example, students should not automatically have the same permissions as teachers, researchers, healthcare professionals, or administrators.
-
-Important permissions must be enforced on the server, not only through the user interface.
-
-Privileged roles require appropriate authorization and verification.
-
-Access to sensitive information must be limited to authorized users and permitted purposes.
+SIMONIUM must not be considered production-ready until the necessary security and operational controls have been implemented and evaluated.
 
 ---
 
-## 11. Artificial Intelligence and Human Oversight
+## 13. Expected Benefits and Impact
 
-Artificial intelligence may support future SIMONIUM capabilities such as:
+SIMONIUM's expected value comes from connecting activities and information that may otherwise remain separate.
 
-- Organizing information by topic.
-- Suggesting relationships between related records.
-- Helping users find relevant information.
-- Identifying incomplete or inconsistent records.
-- Supporting information retrieval.
-- Assisting with exploratory analysis.
+### For Communities
+- More structured ways to communicate local problems.
+- Opportunities to participate in approved investigations.
+- Better visibility into the status of submitted observations.
 
-AI-generated suggestions must not automatically be treated as verified facts.
+### For Students
+- More opportunities to connect learning with practical problems.
+- Experience in observation, information collection, and problem-solving.
+- Opportunities to participate in structured research-related activities.
 
-Important decisions and approvals should remain under appropriate human responsibility.
+### For Teachers
+- Tools for organizing learning activities.
+- Structured review and feedback workflows.
+- Opportunities to connect classroom activities with relevant research questions.
 
-AI capabilities should be described as operational only after their implementation and testing.
+### For Researchers
+- Better organization of research questions and submissions.
+- Opportunities to collaborate with communities and educational institutions.
+- More structured access to suitable, reviewed information.
+
+### For Health Professionals
+- A proposed environment for organizing appropriate health-related observations.
+- Opportunities to collaborate on authorized research activities.
+- Structured workflows for reviewing relevant submissions.
+
+### For Institutions
+- Opportunities to coordinate approved activities across relevant sectors.
+- More organized information workflows.
+- A modular foundation for future collaboration.
+
+### For Scientific Discovery
+- Better connections between research questions and relevant observations.
+- Opportunities to identify relationships that require further investigation.
+- Support for organizing knowledge across disciplines.
+
+These are expected benefits, not measured results.
+
+Their actual impact will depend on implementation quality, adoption, data quality, user participation, institutional cooperation, and evaluation.
 
 ---
 
-## 12. Privacy and Responsible Information Management
+## 14. Development Roadmap
 
-SIMONIUM is intended to support responsible information handling.
+SIMONIUM is being developed incrementally.
 
-Important principles include:
+The planned development stages include:
 
-- Protecting personal and confidential information.
-- Respecting consent and applicable data-protection requirements.
-- Restricting access according to authorization.
-- Preserving source information.
-- Supporting appropriate correction procedures.
-- Avoiding the presentation of unverified information as established fact.
-- Respecting source attribution and data-use restrictions.
-- Establishing reliable backup and recovery procedures.
+### Phase 1: Core Frontend
+- Establish the main platform structure.
+- Develop shared interface components.
+- Organize the core module configuration.
+- Build initial module interfaces.
 
-The effectiveness of these principles depends on appropriate technical and organizational implementation.
+### Phase 2: Authentication and Permissions
+- Implement user authentication.
+- Establish verified user roles.
+- Enforce permissions through backend services.
+- Define access rules for different information types.
+
+### Phase 3: Backend and Shared Database
+- Establish backend services and database infrastructure.
+- Design appropriate data relationships.
+- Implement secure APIs.
+- Support controlled information sharing across modules.
+
+### Phase 4: Information Workflows
+- Implement submission and review processes.
+- Support correction, verification, approval, and rejection.
+- Track submission status.
+- Introduce audit trails.
+
+### Phase 5: File and Data Management
+- Implement secure file handling.
+- Develop backup and restoration procedures.
+- Establish appropriate record retention and deletion controls.
+
+### Phase 6: Module Development
+- Expand Health, Education, Research & Discovery, and Community capabilities.
+- Implement connections between appropriate modules.
+- Test workflows using suitable non-sensitive test data.
+
+### Phase 7: AI-Assisted Capabilities
+- Evaluate suitable AI-supported information management features.
+- Test accuracy and limitations.
+- Introduce appropriate human oversight and privacy safeguards.
+
+### Phase 8: Testing and Future Release
+- Test functionality and security.
+- Evaluate accessibility and mobile usability.
+- Resolve identified defects.
+- Assess readiness before any public release.
+
+The roadmap may change as requirements are evaluated and development progresses.
 
 ---
 
-## 13. Current Development Status
+## 15. Current Project Status
 
-SIMONIUM is under development.
+**SIMONIUM is currently under development.**
 
-The current project includes an initial React and TypeScript application structure.
+The existing codebase contains initial frontend components and module structures.
 
-Development work includes:
+The complete production platform is not yet established.
 
-- An initial platform dashboard.
-- Shared header and footer components.
-- A reusable module-card system.
-- A central module registry.
-- An initial Health module interface.
-- Initial module-navigation functionality.
+In particular, the existence of the current frontend does not establish that the following are operational:
 
-The wider platform remains incomplete.
-
-The following capabilities require further implementation and testing:
-
-- Production-ready authentication.
+- Production authentication.
 - Server-enforced role permissions.
-- Shared backend and database.
-- Complete submission and verification workflows.
-- Persistent information storage.
-- Secure cross-module information sharing.
-- File management.
-- Backup and restoration.
-- Audit logging.
-- Comprehensive security controls.
-- Artificial intelligence integrations.
-- Complete automated and manual testing.
+- A shared online database.
+- Complete cross-module information workflows.
+- Production-ready file management.
+- Secure automated backups and restoration.
+- Fully implemented AI capabilities.
+- A completed mobile application.
 
-A visible interface does not by itself demonstrate that the underlying service is fully operational.
+These capabilities must be developed and verified before they can be presented as operational.
 
 ---
 
-## 14. Testing and Quality Assurance
+## 16. Future Expansion
 
-SIMONIUM should be tested as development progresses.
+SIMONIUM is designed with future expansion in mind.
 
-### Functional Testing
+Additional sectors, user roles, information types, and integrations may be introduced when justified by real needs and supported by appropriate technical, privacy, and governance requirements.
 
-- Check that the application starts correctly.
-- Verify navigation between available sections.
-- Test forms and input validation.
-- Check error handling.
+New modules should integrate with the shared platform architecture without unnecessarily rebuilding existing modules.
 
-### Data Integrity Testing
+Expansion must preserve security, maintainability, data quality, and the responsibilities of each sector.
 
-- Verify storage and retrieval when persistent storage is implemented.
-- Check how invalid or incomplete information is handled.
-- Test supported correction and deletion operations.
-- Verify source attribution and record relationships.
-
-### Security Testing
-
-- Test authentication and authorization.
-- Confirm that users cannot access information outside their permissions.
-- Test server-side enforcement of sensitive operations.
-- Review the handling of confidential information.
-
-### Workflow Testing
-
-- Test submission and review.
-- Verify correction and verification procedures.
-- Confirm that information status is clearly represented.
-- Check that approved information is reused only under permitted conditions.
-
-Testing results and unresolved problems should be documented.
-
----
-
-## 15. Expected Impact
-
-SIMONIUM aims to improve information management and collaboration.
-
-### Research
-
-Potential benefits include improved discovery of related information and better connections between research questions and evidence.
-
-### Health
-
-Potential benefits include better organization of health-related observations and research questions, subject to appropriate professional review.
-
-### Education
-
-Potential benefits include stronger connections between classroom learning, practical activities, and research questions.
-
-### Community
-
-Potential benefits include structured ways to document information needs and connect community observations with relevant activities.
-
-### Institutions
-
-Potential benefits include improved coordination of information and clearer relationships between questions, sources, reviews, and findings.
-
-These are intended benefits. Actual impact must be evaluated using appropriate evidence and measurable indicators.
-
----
-
-## 16. Future Development
-
-Planned development areas include:
-
-1. Completing and testing the user interface.
-2. Implementing authentication and authorization.
-3. Establishing a shared backend and database.
-4. Developing secure submission and review workflows.
-5. Connecting information across modules.
-6. Improving search and source traceability.
-7. Implementing backup and restoration.
-8. Establishing audit logs.
-9. Evaluating responsible AI-assisted information management.
-10. Testing usability, reliability, privacy, and security.
-11. Adding further modules as appropriate.
-
-Development should proceed incrementally, with each capability tested before it is considered complete.
+The four initial core sectors provide the starting structure, not a permanent limit on the platform's future scope.
 
 ---
 
 ## 17. Project Principles
 
-SIMONIUM follows these guiding principles:
+SIMONIUM's development is guided by the following principles:
 
-- **Evidence:** Use appropriate and documented sources.
-- **Traceability:** Preserve information about sources.
-- **Human oversight:** Keep important decisions under appropriate human responsibility.
-- **Privacy:** Protect personal and confidential information.
-- **Collaboration:** Support responsible cooperation across sectors.
-- **Extensibility:** Allow additional modules to be introduced.
-- **Transparency:** Communicate development status and limitations honestly.
-- **Accountability:** Support traceability of important reviews and changes.
-- **Responsible innovation:** Develop technology to address meaningful information needs.
-
----
-
-## 18. Conclusion
-
-SIMONIUM is being developed as a multidisciplinary platform connecting research questions, educational activities, healthcare information, and community observations.
-
-Its long-term goal is to make information easier to organize, find, review, connect, analyze, and reuse responsibly.
-
-By supporting structured workflows and collaboration across different sectors, SIMONIUM aims to provide a foundation for scientific discovery, practical learning, and evidence-informed decision-making.
-
-The platform will continue to develop incrementally, with information quality, privacy, security, and testing treated as essential requirements.
+1. **Evidence First:** Identify and understand real problems before proposing solutions.
+2. **Human Oversight:** Keep authorized people responsible for required review and approval.
+3. **Information Quality:** Distinguish unreviewed submissions from verified information.
+4. **Privacy and Security:** Protect sensitive information and enforce appropriate access permissions.
+5. **Collaboration:** Connect relevant people, institutions, and activities.
+6. **Modularity:** Support the addition and improvement of platform sectors.
+7. **Transparency:** Distinguish existing capabilities from planned features.
+8. **Responsible AI:** Use AI to assist appropriate tasks without treating its output as automatically correct.
+9. **Continuous Improvement:** Test, evaluate, and improve the platform as development progresses.
 
 ---
 
-**Project Status:** Under development.
+## 18. Long-Term Goal
 
-**Important Notice:** Features described as planned or intended should not be considered operational until they have been implemented and tested.
+SIMONIUM aims to become an extensible multidisciplinary platform that helps connect community observations, educational activities, research questions, professional knowledge, and scientific discovery.
+
+Its long-term goal is to make it easier for people and institutions to collaborate around real problems, organize relevant information responsibly, and develop knowledge that can support better decisions.
+
+The platform's success will be evaluated through its reliability, security, usability, quality of information workflows, level of meaningful collaboration, and demonstrated benefits to its users.
+
+---
+
+## 19. Project Summary
+
+| Element | Description |
+|---|---|
+| Project Name | SIMONIUM Platform |
+| Full Name | Scientific Information Management, Organization, Network, Intelligence and Unified Multidisciplinary Platform |
+| Primary Purpose | Connect information, people, education, research, and discovery |
+| Initial Core Sectors | Health, Education, Research & Discovery, Community |
+| Intended Users | Community members, students, teachers, researchers, discoverers, health professionals, institutions, and administrators |
+| Current Frontend Stack | React, TypeScript, Vite, CSS |
+| Development Status | In Development |
+| Platform Direction | Website and planned mobile application |
+| Development Approach | Modular, evidence-based, and security-conscious |
+
+---
+
+## 20. Conclusion
+
+SIMONIUM is being developed around the idea that useful knowledge can emerge when people, information, and research activities are connected responsibly.
+
+By linking community observations, educational activities, research questions, and professional knowledge through structured workflows, SIMONIUM aims to support collaboration, practical learning, scientific investigation, and discovery.
+
+The project begins with four core sectors and an extensible architecture designed to support future development.
+
+Its value will not be determined by the number of modules alone, but by whether it can solve clearly identified problems, protect the information entrusted to it, improve collaboration, and demonstrate meaningful benefits to the people and institutions that use it.
+
+**SIMONIUM — Connecting knowledge. Enabling discovery.**
