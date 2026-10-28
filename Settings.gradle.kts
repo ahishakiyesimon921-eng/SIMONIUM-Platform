@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "SIMONIUM"
-include(":app")￼Enter
+include(":app")￼Enter 
