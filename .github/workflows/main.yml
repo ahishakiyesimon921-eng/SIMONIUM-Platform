@@ -1,3 +1,4 @@
+
 name: SIMONIUM Android APK Build
 
 on:
@@ -5,6 +6,9 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -14,35 +18,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check Android project files
-        run: |
-          echo "Checking SIMONIUM Android project..."
-          find . -maxdepth 4 -type f \( \
-            -name "gradlew" -o \
-            -name "build.gradle" -o \
-            -name "build.gradle.kts" -o \
-            -name "settings.gradle" -o \
-            -name "settings.gradle.kts" \
-          \) -print
-
-      - name: Stop if Gradle wrapper is missing
-        run: |
-          if [ ! -f "./gradlew" ]; then
-            echo "ERROR: Android Gradle wrapper is missing."
-            echo "A real Android Gradle project is required to build the APK."
-            exit 1
-          fi
-
-      - name: Set up Java
+      - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
 
-      - name: Build SIMONIUM Debug APK
-        run: |
-          chmod +x ./gradlew
-          ./gradlew assembleDebug
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build SIMONIUM APK
+        run: gradle assembleDebug
 
       - name: Upload SIMONIUM APK
         uses: actions/upload-artifact@v4
@@ -50,3 +41,4 @@ jobs:
           name: SIMONIUM-Android-APK
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+￼
