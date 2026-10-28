@@ -1,4 +1,4 @@
-name: SIMONIUM Android Build
+name: SIMONIUM Android Build app
 
 on:
   workflow_dispatch:
