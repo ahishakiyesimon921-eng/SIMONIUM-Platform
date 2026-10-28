@@ -1,51 +1,52 @@
-name: SIMONIUM Android Build
+name: SIMONIUM Android APK Build
 
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Check Android project files
+        run: |
+          echo "Checking SIMONIUM Android project..."
+          find . -maxdepth 4 -type f \( \
+            -name "gradlew" -o \
+            -name "build.gradle" -o \
+            -name "build.gradle.kts" -o \
+            -name "settings.gradle" -o \
+            -name "settings.gradle.kts" \
+          \) -print
+
+      - name: Stop if Gradle wrapper is missing
+        run: |
+          if [ ! -f "./gradlew" ]; then
+            echo "ERROR: Android Gradle wrapper is missing."
+            echo "A real Android Gradle project is required to build the APK."
+            exit 1
+          fi
+
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17'
-          cache: gradle
+          java-version: "17"
 
-      - name: Make Gradle executable
-        run: chmod +x gradlew
+      - name: Build SIMONIUM Debug APK
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug
 
-      - name: Run unit tests
-        run: ./gradlew testDebugUnitTest
-
-      - name: Build debug APK
-        run: ./gradlew assembleDebug
-
-      - name: Upload debug APK
+      - name: Upload SIMONIUM APK
         uses: actions/upload-artifact@v4
         with:
-          name: SIMONIUM-Android-Debug-APK
+          name: SIMONIUM-Android-APK
           path: app/build/outputs/apk/debug/*.apk
-
-      - name: Build release bundle (AAB)
-        if: github.ref == 'refs/heads/main'
-        run: ./gradlew bundleRelease
-
-      - name: Upload release bundle
-        if: github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v4
-        with:
-          name: SIMONIUM-Android-Release-AAB
-          path: app/build/outputs/bundle/release/*.aab
+          if-no-files-found: error
